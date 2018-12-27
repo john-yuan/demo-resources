@@ -1,0 +1,39 @@
+
+Build start:
+    app-01 done.
+    app-02 done.
+    app-03 done.
+
+Test start:
+
+[COMMAND] java -cp app-01.jar org.example.app.App01:
+
+    App01: jar:file:/test/demo-resources/target/app-01.jar!/config.properties
+
+[COMMAND] java -cp app-02.jar org.example.app.App02:
+
+    App02: jar:file:/test/demo-resources/target/app-02.jar!/config.properties
+
+[COMMAND] java -cp app-03.jar org.example.app.App03:
+
+    App03: null
+
+[COMMAND] java -cp app-03.jar:app-02.jar:app-01.jar org.example.app.App03:
+
+    App03: jar:file:/test/demo-resources/target/app-02.jar!/config.properties
+
+[COMMAND] java -cp app-03.jar:app-01.jar:app-02.jar org.example.app.App03:
+
+    App03: jar:file:/test/demo-resources/target/app-01.jar!/config.properties
+
+[COMMAND] java -cp app-01.jar:app-02.jar org.example.app.App01:
+
+    App01: jar:file:/test/demo-resources/target/app-01.jar!/config.properties
+
+[COMMAND] java -cp app-02.jar:app-01.jar org.example.app.App01:
+
+    App01: jar:file:/test/demo-resources/target/app-02.jar!/config.properties
+
+
+Reported at: 2018-12-28 00:04:54 +0800
+
