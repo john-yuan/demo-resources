@@ -18,11 +18,11 @@ java -cp app-02.jar:app-01.jar:app-03.jar org.example.app.App03
 
 结果是不一样的，具体结果请查看运行报告 [report.txt](./report.txt) 。
 
-> 如果想获取特定包下面的文件，请使用 [ClassLoader#getResources](1) 方法获取所有地址，然后从中找到你想要的文件。
-> 请查看示例 [App01. getResourceInSamePackageWithClass](2)。
-
+> 如果想获取特定包下面的文件，请使用 [ClassLoader#getResources][1] 方法获取所有地址，然后从中找到你想要的文件。
+> 具体请查看示例 [App01. getResourceInSamePackageWithClass][2]。
 
 [1]: https://docs.oracle.com/javase/8/docs/api/java/lang/ClassLoader.html#getResources-java.lang.String-
+
 [2]: https://github.com/john-yuan/demo-resources/blob/master/code/app-01/src/org/example/app/App01.java#L28
 
 如果你想在本机测试，请克隆这个项目，然后打开 bash 执行以下脚本文件：
