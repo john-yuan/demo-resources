@@ -15,16 +15,16 @@ public class App01 {
             System.out.println(" App01-Config-Path(Using App01.getResourceInSamePackageWithClass):");
             System.out.println("   " + url1);
         } catch (IOException e) {
-
+            e.printStackTrace();
         }
     }
 
     /**
      * 获取指定 class jar 包下面的资源文件
      *
-     * @param path 文件路径，相对于 classpath
-     * @param clazz 同一个路径下的 class
-     * @return 成功是返回 URL，失败时返回 null
+     * @param path 文件路径，相对于 classpath （不能以 / 开头）
+     * @param clazz 同一个路径下的 class （用来限定我们要读取的文件需与这个类在同一个 jar 包）
+     * @return 成功时返回文件对应的 URL，找不到时返回 null
      * @throws IOException
      */
     public static URL getResourceInSamePackageWithClass(String path, Class<?> clazz)
