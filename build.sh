@@ -6,6 +6,8 @@
 
 # 进入脚本所在目录，并保存该路径
 readonly __DIR__=$(cd $(dirname $0) && pwd)
+
+# 定义相关根目录
 readonly CODE_DIR="${__DIR__}/code"
 readonly TARGET_DIR="${__DIR__}/target"
 
@@ -71,7 +73,7 @@ echo
 echo "        App-Name: ${APP_ABS_NAME}"
 echo "   App-Directory: ${APP_ABS_PATH}"
 echo "Target-Directory: ${APP_TARGET_DIR}"
-echo "    Jar-FileName: ${APP_TARGET_JAR}"
+echo "   Jar-File-Name: ${APP_TARGET_JAR}"
 echo
 
 # 删除原有输出目录
@@ -119,7 +121,6 @@ fi
 # 复制源代码
 cp -r $APP_SRC/* $APP_TARGET_DIR
 
-
 # 查找所有 .java 文件
 cd $APP_TARGET_DIR
 
@@ -143,7 +144,7 @@ rm -rf $TEMP_FILE
 if [ "${SROUCE_FILE_LIST}" == "" ]
 then
     echo
-    echo "ERROR: No java source file find in ${APP_SRC}"
+    echo "ERROR: No java source file found in ${APP_SRC}"
     echo
     exit 1
 fi
@@ -172,7 +173,7 @@ done
 # 构建 jar 包
 jar cvf $APP_TARGET_JAR *
 
-# 检查构建 jar 是否成功
+# 检查构建 jar 包是否成功
 if [ $? -ne 0 ]
 then
     echo
