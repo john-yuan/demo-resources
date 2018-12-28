@@ -7,11 +7,13 @@ import java.util.Enumeration;
 public class App01 {
     public static void main(String[] args) {
         URL url = App01.class.getResource("/config.properties");
-        System.out.println("    App01: " + url);
+        System.out.println(" App01-Config-Path:");
+        System.out.println("   " + url);
 
         try {
             URL url1 = App01.getResourceInSamePackageWithClass("config.properties", App01.class);
-            System.out.println("    Target: " + url1);
+            System.out.println(" App01-Config-Path(Using App01.getResourceInSamePackageWithClass):");
+            System.out.println("   " + url1);
         } catch (IOException e) {
 
         }

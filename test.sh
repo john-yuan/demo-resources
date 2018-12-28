@@ -60,37 +60,37 @@ echo
 
 cd "${__DIR__}/target"
 
-echo "[COMMAND] java -cp app-01.jar org.example.app.App01:"
+echo "[ COMMAND: java -cp app-01.jar org.example.app.App01 ]"
 echo
 java -cp app-01.jar org.example.app.App01
 echo
 
-echo "[COMMAND] java -cp app-02.jar org.example.app.App02:"
+echo "[ COMMAND: java -cp app-02.jar org.example.app.App02 ]"
 echo
 java -cp app-02.jar org.example.app.App02
 echo
 
-echo "[COMMAND] java -cp app-03.jar org.example.app.App03:"
+echo "[ COMMAND: java -cp app-03.jar org.example.app.App03 ]"
 echo
 java -cp app-03.jar org.example.app.App03
 echo
 
-echo "[COMMAND] java -cp app-03.jar:app-02.jar:app-01.jar org.example.app.App03:"
-echo
-java -cp app-03.jar:app-02.jar:app-01.jar org.example.app.App03
-echo
-
-echo "[COMMAND] java -cp app-03.jar:app-01.jar:app-02.jar org.example.app.App03:"
+echo "[ COMMAND: java -cp app-03.jar:app-01.jar:app-02.jar org.example.app.App03 ]"
 echo
 java -cp app-03.jar:app-01.jar:app-02.jar org.example.app.App03
 echo
 
-echo "[COMMAND] java -cp app-01.jar:app-02.jar org.example.app.App01:"
+echo "[ COMMAND: java -cp app-03.jar:app-02.jar:app-01.jar org.example.app.App03 ]"
+echo
+java -cp app-03.jar:app-02.jar:app-01.jar org.example.app.App03
+echo
+
+echo "[ COMMAND: java -cp app-01.jar:app-02.jar org.example.app.App01 ]"
 echo
 java -cp app-01.jar:app-02.jar org.example.app.App01
 echo
 
-echo "[COMMAND] java -cp app-02.jar:app-01.jar org.example.app.App01:"
+echo "[ COMMAND: java -cp app-02.jar:app-01.jar org.example.app.App01 ]"
 echo
 java -cp app-02.jar:app-01.jar org.example.app.App01
 echo

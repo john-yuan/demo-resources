@@ -6,37 +6,47 @@ Build start:
 
 Test start:
 
-[COMMAND] java -cp app-01.jar org.example.app.App01:
+[ COMMAND: java -cp app-01.jar org.example.app.App01 ]
 
-    App01: jar:file:/demo/demo-resources/target/app-01.jar!/config.properties
-    Target: jar:file:/demo/demo-resources/target/app-01.jar!/config.properties
+ App01-Config-Path:
+   jar:file:/demo/demo-resources/target/app-01.jar!/config.properties
+ App01-Config-Path(Using App01.getResourceInSamePackageWithClass):
+   jar:file:/demo/demo-resources/target/app-01.jar!/config.properties
 
-[COMMAND] java -cp app-02.jar org.example.app.App02:
+[ COMMAND: java -cp app-02.jar org.example.app.App02 ]
 
-    App02: jar:file:/demo/demo-resources/target/app-02.jar!/config.properties
+ App02-Config-Path:
+   jar:file:/demo/demo-resources/target/app-02.jar!/config.properties
 
-[COMMAND] java -cp app-03.jar org.example.app.App03:
+[ COMMAND: java -cp app-03.jar org.example.app.App03 ]
 
-    App03: null
+ App03-Config-Path:
+   null
 
-[COMMAND] java -cp app-03.jar:app-02.jar:app-01.jar org.example.app.App03:
+[ COMMAND: java -cp app-03.jar:app-01.jar:app-02.jar org.example.app.App03 ]
 
-    App03: jar:file:/demo/demo-resources/target/app-02.jar!/config.properties
+ App03-Config-Path:
+   jar:file:/demo/demo-resources/target/app-01.jar!/config.properties
 
-[COMMAND] java -cp app-03.jar:app-01.jar:app-02.jar org.example.app.App03:
+[ COMMAND: java -cp app-03.jar:app-02.jar:app-01.jar org.example.app.App03 ]
 
-    App03: jar:file:/demo/demo-resources/target/app-01.jar!/config.properties
+ App03-Config-Path:
+   jar:file:/demo/demo-resources/target/app-02.jar!/config.properties
 
-[COMMAND] java -cp app-01.jar:app-02.jar org.example.app.App01:
+[ COMMAND: java -cp app-01.jar:app-02.jar org.example.app.App01 ]
 
-    App01: jar:file:/demo/demo-resources/target/app-01.jar!/config.properties
-    Target: jar:file:/demo/demo-resources/target/app-01.jar!/config.properties
+ App01-Config-Path:
+   jar:file:/demo/demo-resources/target/app-01.jar!/config.properties
+ App01-Config-Path(Using App01.getResourceInSamePackageWithClass):
+   jar:file:/demo/demo-resources/target/app-01.jar!/config.properties
 
-[COMMAND] java -cp app-02.jar:app-01.jar org.example.app.App01:
+[ COMMAND: java -cp app-02.jar:app-01.jar org.example.app.App01 ]
 
-    App01: jar:file:/demo/demo-resources/target/app-02.jar!/config.properties
-    Target: jar:file:/demo/demo-resources/target/app-01.jar!/config.properties
+ App01-Config-Path:
+   jar:file:/demo/demo-resources/target/app-02.jar!/config.properties
+ App01-Config-Path(Using App01.getResourceInSamePackageWithClass):
+   jar:file:/demo/demo-resources/target/app-01.jar!/config.properties
 
 
-Reported at: 2018-12-28 13:15:26 +0800
+Reported at: 2018-12-28 22:24:02 +0800
 
