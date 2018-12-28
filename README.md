@@ -23,7 +23,7 @@ java -cp app-02.jar:app-01.jar:app-03.jar org.example.app.App03
 
 [1]: https://docs.oracle.com/javase/8/docs/api/java/lang/ClassLoader.html#getResources-java.lang.String-
 
-[2]: https://github.com/john-yuan/demo-resources/blob/master/code/app-01/src/org/example/app/App01.java#L28
+[2]: https://github.com/john-yuan/demo-resources/blob/master/code/app-01/src/org/example/app/App01.java#L21
 
 如果你想在本机测试，请克隆这个项目，然后打开 bash 执行以下脚本文件：
 
