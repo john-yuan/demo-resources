@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/john-yuan/java-demo-resources.svg?branch=master)](https://travis-ci.org/john-yuan/java-demo-resources)
+
 此项目是一个 Java 小实验，主要用于回答下面这个问题：
 
 **问题**：有 app-01.jar 和 app-02.jar 两个 jar 包，每个 jar 包中都有一个 config.properties 文件。现有一个 jar 包 app-03.jar，这个 jar 包没有 config.properties 这个文件。在执行 app-03.jar 的时候，我们会把 app-01.jar 和 app-02.jar 放在 classpath 中，然后在 app-03.jar 中读取 config.propreties 文件。那么这个时候我们读取到的文件是 app-01.jar 中的还是 app-02.jar 中的？
